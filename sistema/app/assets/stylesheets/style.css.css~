@@ -154,8 +154,8 @@ a:hover {
 	background: #064C8A;
 	border-radius: 20px 0px 20px 0px;
 	font-size: 10px;
-	color: black;
-	background-image: url("pics01.jpg") ;
+	color: green;
+	background-image: url("pics01.jpg");
 }
 
 #menu ul {
@@ -188,7 +188,7 @@ a:hover {
 
 #menu .current_page_item a {
 	background: #05457D;
-	color: #FFFFFF;
+	color: black;
 }
 
 #menu .last {
