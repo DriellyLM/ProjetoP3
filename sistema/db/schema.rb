@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140324175528) do
+ActiveRecord::Schema.define(version: 20140324182722) do
 
   create_table "cargofuncionarios", force: true do |t|
     t.string   "cargofuncionario"
@@ -55,6 +55,12 @@ ActiveRecord::Schema.define(version: 20140324175528) do
 
   create_table "niveldeacessos", force: true do |t|
     t.string   "descricaonivel"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "pontoremotos", force: true do |t|
+    t.string   "endereco"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

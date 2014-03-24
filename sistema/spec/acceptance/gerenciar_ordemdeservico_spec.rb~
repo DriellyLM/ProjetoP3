@@ -1,0 +1,55 @@
+# coding: utf-8
+require 'spec_helper'
+
+feature 'gerenciar ordem de serviço' do
+
+  scenario 'incluir ordem de serviço' do #, :javascript => true  do
+	
+    usuario = FactoryGirl.create(:usuario, :funcionario => "Vitor Silva")
+
+    visit new_ordemdeservico_path
+    preencher_e_verificar_ordemdeservico
+   
+  end
+
+
+  scenario 'alterar ordem de serviço' do #, :javascript => true  do
+
+    usuario = FactoryGirl.create(:usuario, :funcionario => "Vitor Silva")
+    
+    ordemdeservico = FactoryGirl.create(:ordemdeservico, :usuario => usuario)
+
+    visit edit_ordemdeservico_path(ordemdeservico)
+    preencher_e_verificar_ordemdeservico
+
+  end
+
+
+  scenario 'excluir ordem de serviço' do #, :javascript => true  do
+
+    usuario = FactoryGirl.create(:usuario, :funcionario => "Vitor Silva")
+ 
+    ordemdeservico = FactoryGirl.create(:ordemdeservico, :usuario => usuario)
+
+    visit ordemdeservicos_path
+    click_link 'Excluir'  
+    
+  end
+
+
+  def preencher_e_verificar_ordemdeservico
+
+    fill_in 'Email', :with => 'funcionario@server.com'
+    
+    select 'Vitor Silva', :from => 'Funcionário'
+    
+    
+    click_button 'Salvar'
+    
+    page.should have_content 'Email: funcionario@server.com'
+    page.should have_content 'Funcionário: Vitor Silva'
+    
+    
+  end   
+
+end

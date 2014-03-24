@@ -1,0 +1,2 @@
+class PontoremotosController < InheritedResources::Base
+end

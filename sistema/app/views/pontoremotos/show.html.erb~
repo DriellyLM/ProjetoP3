@@ -1,0 +1,9 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Endereco:</strong>
+  <%= @pontoremoto.endereco %>
+</p>
+
+<%= link_to 'Edit', edit_pontoremoto_path(@pontoremoto) %> |
+<%= link_to 'Back', pontoremotos_path %>

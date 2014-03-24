@@ -1,0 +1,27 @@
+<h1>Listing pontoremotos</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Endereco</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @pontoremotos.each do |pontoremoto| %>
+      <tr>
+        <td><%= pontoremoto.endereco %></td>
+        <td><%= link_to 'Show', pontoremoto %></td>
+        <td><%= link_to 'Edit', edit_pontoremoto_path(pontoremoto) %></td>
+        <td><%= link_to 'Destroy', pontoremoto, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Pontoremoto', new_pontoremoto_path %>

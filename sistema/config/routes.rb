@@ -1,4 +1,6 @@
 Sistema::Application.routes.draw do
+  resources :pontoremotos
+
   resources :usuarios
 
   resources :niveldeacessos
