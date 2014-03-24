@@ -11,13 +11,22 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140324170608) do
+ActiveRecord::Schema.define(version: 20140324190505) do
 
   create_table "cargofuncionarios", force: true do |t|
     t.string   "cargofuncionario"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
+
+  create_table "emailfuncionarios", force: true do |t|
+    t.string   "email"
+    t.integer  "funcionario_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "emailfuncionarios", ["funcionario_id"], name: "index_emailfuncionarios_on_funcionario_id"
 
   create_table "enderecofuncionarios", force: true do |t|
     t.string   "logradouro"
@@ -31,8 +40,6 @@ ActiveRecord::Schema.define(version: 20140324170608) do
   end
 
   create_table "funcionarios", force: true do |t|
-    t.string   "email"
-    t.string   "telefone"
     t.string   "nome"
     t.string   "cpf"
     t.string   "sexo"
@@ -45,5 +52,71 @@ ActiveRecord::Schema.define(version: 20140324170608) do
 
   add_index "funcionarios", ["cargofuncionario_id"], name: "index_funcionarios_on_cargofuncionario_id"
   add_index "funcionarios", ["enderecofuncionario_id"], name: "index_funcionarios_on_enderecofuncionario_id"
+
+  create_table "itensdaos", force: true do |t|
+    t.string   "itensos"
+    t.integer  "quantidade"
+    t.integer  "ordemdeservico_id"
+    t.integer  "servico_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "itensdaos", ["ordemdeservico_id"], name: "index_itensdaos_on_ordemdeservico_id"
+  add_index "itensdaos", ["servico_id"], name: "index_itensdaos_on_servico_id"
+
+  create_table "niveldeacessos", force: true do |t|
+    t.string   "descricaonivel"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "ordemdeservicos", force: true do |t|
+    t.string   "descricaoservico"
+    t.string   "descricaoproduto"
+    t.string   "datainicialos"
+    t.string   "datafinalos"
+    t.integer  "usuario_id"
+    t.integer  "pontoremoto_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "ordemdeservicos", ["pontoremoto_id"], name: "index_ordemdeservicos_on_pontoremoto_id"
+  add_index "ordemdeservicos", ["usuario_id"], name: "index_ordemdeservicos_on_usuario_id"
+
+  create_table "pontoremotos", force: true do |t|
+    t.string   "endereco"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "servicos", force: true do |t|
+    t.string   "tipodeservico"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "telefonefuncionarios", force: true do |t|
+    t.string   "numerotelefone"
+    t.integer  "funcionario_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "telefonefuncionarios", ["funcionario_id"], name: "index_telefonefuncionarios_on_funcionario_id"
+
+  create_table "usuarios", force: true do |t|
+    t.string   "login"
+    t.string   "senha"
+    t.string   "ativo"
+    t.integer  "funcionario_id"
+    t.integer  "niveldeacesso_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "usuarios", ["funcionario_id"], name: "index_usuarios_on_funcionario_id"
+  add_index "usuarios", ["niveldeacesso_id"], name: "index_usuarios_on_niveldeacesso_id"
 
 end

@@ -1,4 +1,8 @@
 Sistema::Application.routes.draw do
+  resources :itensdaordemdeservicos
+
+  resources :itensdaos
+
   resources :servicos
 
   resources :ordemdeservicos

@@ -1,0 +1,33 @@
+<h1>Listing itensdaordemdeservicos</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Itensos</th>
+      <th>Quantidade</th>
+      <th>Ordemdeservico</th>
+      <th>Servico</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @itensdaordemdeservicos.each do |itensdaordemdeservico| %>
+      <tr>
+        <td><%= itensdaordemdeservico.itensos %></td>
+        <td><%= itensdaordemdeservico.quantidade %></td>
+        <td><%= itensdaordemdeservico.ordemdeservico %></td>
+        <td><%= itensdaordemdeservico.servico %></td>
+        <td><%= link_to 'Show', itensdaordemdeservico %></td>
+        <td><%= link_to 'Edit', edit_itensdaordemdeservico_path(itensdaordemdeservico) %></td>
+        <td><%= link_to 'Destroy', itensdaordemdeservico, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Itensdaordemdeservico', new_itensdaordemdeservico_path %>

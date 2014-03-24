@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Itensos:</strong>
+  <%= @itensdaordemdeservico.itensos %>
+</p>
+
+<p>
+  <strong>Quantidade:</strong>
+  <%= @itensdaordemdeservico.quantidade %>
+</p>
+
+<p>
+  <strong>Ordemdeservico:</strong>
+  <%= @itensdaordemdeservico.ordemdeservico %>
+</p>
+
+<p>
+  <strong>Servico:</strong>
+  <%= @itensdaordemdeservico.servico %>
+</p>
+
+<%= link_to 'Edit', edit_itensdaordemdeservico_path(@itensdaordemdeservico) %> |
+<%= link_to 'Back', itensdaordemdeservicos_path %>
