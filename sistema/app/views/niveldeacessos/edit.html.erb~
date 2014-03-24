@@ -1,0 +1,6 @@
+<h1>Editing niveldeacesso</h1>
+
+<%= render 'form' %>
+
+<%= link_to 'Show', @niveldeacesso %> |
+<%= link_to 'Back', niveldeacessos_path %>

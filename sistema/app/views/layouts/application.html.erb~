@@ -19,7 +19,7 @@ Released   : 20121012
 	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
 
 
-	<title>Banco Mercantil</title>
+	<title>Supermercado Marques S/A</title>
 
 
 	<link href="http://fonts.googleapis.com/css?family=Oswald" rel="stylesheet" type="text/css" />
@@ -48,7 +48,7 @@ Released   : 20121012
 	<div id="header">
 		
 		<div id="logo">
-			<h1><a href="#">Banco Mercantil</a></h1>
+			<h1><a href="#">Supermercado Marques S/A</a></h1>
 			<p>Bom atendimento e ótimos rendimentos é a nossa satisfação.</p>
 		</div>
 		
@@ -98,16 +98,16 @@ Released   : 20121012
 	
 	<div id="three-columns">
 		<div id="column1">
-			<h2><strong>Missão</strong></h2>
-			<p>Gerar soluções financeiras, com excelência e diferencial no relacionamento, remuneração adequada ao capital societário, recompensa justa ao capital humano e atuação socioambiental responsável.</p>
+			<h2><strong>Responsabilidade Social</strong></h2>
+			<p>Socialmente responsável, preserva o meio ambiente e promove o esporte e a solidariedade.</p>
 		</div>
 		<div id="column2">
-			<h2><strong>Visão</strong></h2>
-			<p>Perpetuar o negócio com segurança, rentabilidade e competitividade.</p>
+			<h2><strong>Instituto Marques S/A</strong></h2>
+			<p>Promove o desenvolvimento humano por meio de ações educativas em prol da melhoria das comunidades do entorno de nossas lojas.</p>
 		</div>
 		<div id="column3">
-			<h2><strong>Proposta de Valor</strong></h2>
-			<p>Prestar soluções financeiras com simplicidade, eficácia e diferencial no relacionamento.</p>
+			<h2><strong>Qualidade e Multibenefícios</strong></h2>
+			<p>Controle de qualidade de frutas, legumes e verduras em todo o processo produtivo. Produtos e serviços que beneficiam os funcionários e as empresas.</p>
 		</div>
 	</div>
 	

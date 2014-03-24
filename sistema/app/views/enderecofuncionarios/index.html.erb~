@@ -1,4 +1,4 @@
-<h1>Listing enderecofuncionarios</h1>
+<h1>Listar Endereços dos Funcionários</h1>
 
 <table>
   <thead>
@@ -24,9 +24,9 @@
         <td><%= enderecofuncionario.cidade %></td>
         <td><%= enderecofuncionario.uf %></td>
         <td><%= enderecofuncionario.cep %></td>
-        <td><%= link_to 'Show', enderecofuncionario %></td>
-        <td><%= link_to 'Edit', edit_enderecofuncionario_path(enderecofuncionario) %></td>
-        <td><%= link_to 'Destroy', enderecofuncionario, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Ver', enderecofuncionario %></td>
+        <td><%= link_to 'Editar', edit_enderecofuncionario_path(enderecofuncionario) %></td>
+        <td><%= link_to 'Excluir', enderecofuncionario, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>
@@ -34,4 +34,4 @@
 
 <br>
 
-<%= link_to 'New Enderecofuncionario', new_enderecofuncionario_path %>
+<%= link_to 'Cadastrar Novo Endereço de Funcionário', new_enderecofuncionario_path %>

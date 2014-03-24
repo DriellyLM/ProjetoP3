@@ -1,9 +1,9 @@
-<h1>Listing niveldeacessos</h1>
+<h1>Listar Níveis de Acesso</h1>
 
 <table>
   <thead>
     <tr>
-      <th>Descricaonivel</th>
+      <th>Descrição do Nível</th>
       <th></th>
       <th></th>
       <th></th>
@@ -14,9 +14,9 @@
     <% @niveldeacessos.each do |niveldeacesso| %>
       <tr>
         <td><%= niveldeacesso.descricaonivel %></td>
-        <td><%= link_to 'Show', niveldeacesso %></td>
-        <td><%= link_to 'Edit', edit_niveldeacesso_path(niveldeacesso) %></td>
-        <td><%= link_to 'Destroy', niveldeacesso, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Ver', niveldeacesso %></td>
+        <td><%= link_to 'Editar', edit_niveldeacesso_path(niveldeacesso) %></td>
+        <td><%= link_to 'Excluir', niveldeacesso, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>
@@ -24,4 +24,4 @@
 
 <br>
 
-<%= link_to 'New Niveldeacesso', new_niveldeacesso_path %>
+<%= link_to 'Cadastrar Novo Nível de Acesso', new_niveldeacesso_path %>

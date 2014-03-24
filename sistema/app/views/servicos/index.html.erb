@@ -1,4 +1,4 @@
-<h1>Listing servicos</h1>
+<h1>Listar Servios</h1>
 
 <table>
   <thead>
@@ -14,9 +14,9 @@
     <% @servicos.each do |servico| %>
       <tr>
         <td><%= servico.tipodeservico %></td>
-        <td><%= link_to 'Show', servico %></td>
-        <td><%= link_to 'Edit', edit_servico_path(servico) %></td>
-        <td><%= link_to 'Excluir', servico, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Ver', servico %></td>
+        <td><%= link_to 'Editar', edit_servico_path(servico) %></td>
+        <td><%= link_to 'Excluir', servico, method: :delete, data: { confirm: 'Você tem certeza?' } %></td>
       </tr>
     <% end %>
   </tbody>
@@ -24,4 +24,4 @@
 
 <br>
 
-<%= link_to 'New Servico', new_servico_path %>
+<%= link_to 'Cadastrar Novo Serviço', new_servico_path %>

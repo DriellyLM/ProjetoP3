@@ -1,7 +1,7 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <strong>Descricaonivel:</strong>
+  <strong>Descrição do Nível:</strong>
   <%= @niveldeacesso.descricaonivel %>
 </p>
 

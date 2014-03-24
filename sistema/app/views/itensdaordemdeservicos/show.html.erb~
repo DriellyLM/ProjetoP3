@@ -1,7 +1,7 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <strong>Itensos:</strong>
+  <strong>Itens OS:</strong>
   <%= @itensdaordemdeservico.itensos %>
 </p>
 
@@ -11,14 +11,14 @@
 </p>
 
 <p>
-  <strong>Ordemdeservico:</strong>
-  <%= @itensdaordemdeservico.ordemdeservico %>
+  <strong>Ordem de Serviço:</strong>
+  <%= @itensdaordemdeservico.ordemdeservico.descricaoservico %>
 </p>
 
 <p>
-  <strong>Servico:</strong>
-  <%= @itensdaordemdeservico.servico %>
+  <strong>Serviço:</strong>
+  <%= @itensdaordemdeservico.servico.tipodeservico %>
 </p>
 
-<%= link_to 'Edit', edit_itensdaordemdeservico_path(@itensdaordemdeservico) %> |
-<%= link_to 'Back', itensdaordemdeservicos_path %>
+<%= link_to 'Editar', edit_itensdaordemdeservico_path(@itensdaordemdeservico) %> |
+<%= link_to 'Voltar', itensdaordemdeservicos_path %>

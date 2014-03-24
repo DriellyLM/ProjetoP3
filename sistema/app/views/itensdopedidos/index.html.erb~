@@ -1,4 +1,4 @@
-<h1>Listing itensdopedidos</h1>
+<h1>Listar Itens dos Pedidos</h1>
 
 <table>
   <thead>
@@ -18,10 +18,10 @@
       <tr>
         <td><%= itensdopedido.itempedido %></td>
         <td><%= itensdopedido.quantidade %></td>
-        <td><%= itensdopedido.pedido.to_s %></td>
-        <td><%= itensdopedido.produto.to_s %></td>
-        <td><%= link_to 'Show', itensdopedido %></td>
-        <td><%= link_to 'Edit', edit_itensdopedido_path(itensdopedido) %></td>
+        <td><%= itensdopedido.pedido.datapedido %></td>
+        <td><%= itensdopedido.produto.numeroee %></td>
+        <td><%= link_to 'Ver', itensdopedido %></td>
+        <td><%= link_to 'Editar', edit_itensdopedido_path(itensdopedido) %></td>
         <td><%= link_to 'Excluir', itensdopedido, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
@@ -30,4 +30,4 @@
 
 <br>
 
-<%= link_to 'New Itensdopedido', new_itensdopedido_path %>
+<%= link_to 'Cadastrar Novos Itens do Pedido', new_itensdopedido_path %>

@@ -12,7 +12,7 @@
 
 <p>
   <strong>Ordem de Serviço:</strong>
-  <%= @pedido.ordemdeservico %>
+  <%= @pedido.ordemdeservico.descricaoservico %>
 </p>
 
 <%= link_to 'Edit', edit_pedido_path(@pedido) %> |

@@ -21,12 +21,12 @@
 </p>
 
 <p>
-  <strong>Uf:</strong>
+  <strong>UF:</strong>
   <%= @enderecofuncionario.uf %>
 </p>
 
 <p>
-  <strong>Cep:</strong>
+  <strong>CEP:</strong>
   <%= @enderecofuncionario.cep %>
 </p>
 

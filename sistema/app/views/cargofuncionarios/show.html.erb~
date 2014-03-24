@@ -1,7 +1,7 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <strong>Cargo do Funcionário:</strong>
+  <strong>Cargo Funcionario:</strong>
   <%= @cargofuncionario.cargofuncionario %>
 </p>
 

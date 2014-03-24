@@ -12,12 +12,12 @@
 
 <p>
   <strong>Pedido:</strong>
-  <%= @itensdopedido.pedido.to_s %>
+  <%= @itensdopedido.pedido.datapedido %>
 </p>
 
 <p>
   <strong>Produto:</strong>
-  <%= @itensdopedido.produto.to_s %>
+  <%= @itensdopedido.produto.numeroee %>
 </p>
 
 <%= link_to 'Edit', edit_itensdopedido_path(@itensdopedido) %> |

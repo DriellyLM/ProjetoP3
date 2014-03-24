@@ -22,7 +22,7 @@
 
 <p>
   <strong>Usuário:</strong>
-  <%= @ordemdeservico.usuario.funcionario %>
+  <%= @ordemdeservico.usuario.login %>
 </p>
 
 <p>

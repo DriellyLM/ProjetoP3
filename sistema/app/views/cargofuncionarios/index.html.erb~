@@ -24,4 +24,4 @@
 
 <br>
 
-<%= link_to 'Novo Cargo de Funcionário', new_cargofuncionario_path %>
+<%= link_to 'Cadastrar Novo Cargo de Funcionário', new_cargofuncionario_path %>

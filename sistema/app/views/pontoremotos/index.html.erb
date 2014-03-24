@@ -1,4 +1,4 @@
-<h1>Listing pontoremotos</h1>
+<h1>Listar Pontos Remotos</h1>
 
 <table>
   <thead>
@@ -14,9 +14,9 @@
     <% @pontoremotos.each do |pontoremoto| %>
       <tr>
         <td><%= pontoremoto.endereco %></td>
-        <td><%= link_to 'Show', pontoremoto %></td>
-        <td><%= link_to 'Edit', edit_pontoremoto_path(pontoremoto) %></td>
-        <td><%= link_to 'Excluir', pontoremoto, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Ver', pontoremoto %></td>
+        <td><%= link_to 'Editar', edit_pontoremoto_path(pontoremoto) %></td>
+        <td><%= link_to 'Excluir', pontoremoto, method: :delete, data: { confirm: 'Você tem certeza?' } %></td>
       </tr>
     <% end %>
   </tbody>
@@ -24,4 +24,4 @@
 
 <br>
 
-<%= link_to 'New Pontoremoto', new_pontoremoto_path %>
+<%= link_to 'Cadastrar Novo Ponto Remoto', new_pontoremoto_path %>

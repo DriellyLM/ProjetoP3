@@ -6,17 +6,17 @@
 </p>
 
 <p>
-  <strong>Numeroee:</strong>
+  <strong>Número da Etiqueta Eletrônica:</strong>
   <%= @produto.numeroee %>
 </p>
 
 <p>
-  <strong>Dataentradaestoque:</strong>
+  <strong>Data de Entrada no Estoque:</strong>
   <%= @produto.dataentradaestoque %>
 </p>
 
 <p>
-  <strong>Datasaidaestoque:</strong>
+  <strong>Data de Saída do Estoque:</strong>
   <%= @produto.datasaidaestoque %>
 </p>
 

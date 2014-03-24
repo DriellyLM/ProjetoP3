@@ -1,4 +1,4 @@
-<h1>Listing produtos</h1>
+<h1>Listar Produtos</h1>
 
 <table>
   <thead>
@@ -20,9 +20,9 @@
         <td><%= produto.numeroee %></td>
         <td><%= produto.dataentradaestoque %></td>
         <td><%= produto.datasaidaestoque %></td>
-        <td><%= link_to 'Show', produto %></td>
-        <td><%= link_to 'Edit', edit_produto_path(produto) %></td>
-        <td><%= link_to 'Excluir', produto, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Ver', produto %></td>
+        <td><%= link_to 'Editar', edit_produto_path(produto) %></td>
+        <td><%= link_to 'Excluir', produto, method: :delete, data: { confirm: 'Você tem certeza?' } %></td>
       </tr>
     <% end %>
   </tbody>
@@ -30,4 +30,4 @@
 
 <br>
 
-<%= link_to 'New Produto', new_produto_path %>
+<%= link_to 'Cadastrar Novo Produto', new_produto_path %>

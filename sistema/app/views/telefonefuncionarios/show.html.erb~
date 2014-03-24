@@ -7,7 +7,7 @@
 
 <p>
   <strong>Funcionário:</strong>
-  <%= @telefonefuncionario.funcionario.to_s %>
+  <%= @telefonefuncionario.funcionario.nome %>
 </p>
 
 <%= link_to 'Edit', edit_telefonefuncionario_path(@telefonefuncionario) %> |

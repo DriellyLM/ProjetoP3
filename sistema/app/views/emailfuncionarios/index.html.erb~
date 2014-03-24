@@ -1,4 +1,4 @@
-<h1>Listing emailfuncionarios</h1>
+<h1>Listar Emails dos Funcionários</h1>
 
 <table>
   <thead>
@@ -16,8 +16,8 @@
       <tr>
         <td><%= emailfuncionario.email %></td>
         <td><%= emailfuncionario.funcionario.nome %></td>
-        <td><%= link_to 'Show', emailfuncionario %></td>
-        <td><%= link_to 'Edit', edit_emailfuncionario_path(emailfuncionario) %></td>
+        <td><%= link_to 'Ver', emailfuncionario %></td>
+        <td><%= link_to 'Editar', edit_emailfuncionario_path(emailfuncionario) %></td>
         <td><%= link_to 'Excluir', emailfuncionario, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
@@ -26,4 +26,4 @@
 
 <br>
 
-<%= link_to 'New Emailfuncionario', new_emailfuncionario_path %>
+<%= link_to 'Cadastrar Novo Email de Funcionário', new_emailfuncionario_path %>

@@ -1,7 +1,7 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <strong>Tipodeservico:</strong>
+  <strong>Tipo de Serviço:</strong>
   <%= @servico.tipodeservico %>
 </p>
 

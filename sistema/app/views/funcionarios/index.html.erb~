@@ -1,4 +1,4 @@
-<h1>Listing funcionarios</h1>
+<h1>Listar Funcionários</h1>
 
 <table>
   <thead>
@@ -8,7 +8,7 @@
       <th>Sexo</th>
       <th>Data de Nascimento</th>
       <th>Cargo Funcionário</th>
-      <th>Endereço do Funcionário</th>
+      <th>Endereço Funcionário</th>
       <th></th>
       <th></th>
       <th></th>
@@ -24,8 +24,8 @@
         <td><%= funcionario.datanascimento %></td>
         <td><%= funcionario.cargofuncionario.cargofuncionario %></td>
         <td><%= funcionario.enderecofuncionario.logradouro %></td>
-        <td><%= link_to 'Show', funcionario %></td>
-        <td><%= link_to 'Edit', edit_funcionario_path(funcionario) %></td>
+        <td><%= link_to 'Ver', funcionario %></td>
+        <td><%= link_to 'Editar', edit_funcionario_path(funcionario) %></td>
         <td><%= link_to 'Excluir', funcionario, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
@@ -34,4 +34,4 @@
 
 <br>
 
-<%= link_to 'New Funcionario', new_funcionario_path %>
+<%= link_to 'Cadastrar Novo Funcionário', new_funcionario_path %>

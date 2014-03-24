@@ -1,4 +1,4 @@
-<h1>Listing ordemdeservicos</h1>
+<h1>Listar Ordens de Serviços</h1>
 
 <table>
   <thead>
@@ -24,9 +24,9 @@
         <td><%= ordemdeservico.datafinalos %></td>
         <td><%= ordemdeservico.usuario.login %></td>
         <td><%= ordemdeservico.pontoremoto.endereco %></td>
-        <td><%= link_to 'Show', ordemdeservico %></td>
-        <td><%= link_to 'Edit', edit_ordemdeservico_path(ordemdeservico) %></td>
-        <td><%= link_to 'Excluir', ordemdeservico, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Ver', ordemdeservico %></td>
+        <td><%= link_to 'Editar', edit_ordemdeservico_path(ordemdeservico) %></td>
+        <td><%= link_to 'Excluir', ordemdeservico, method: :delete, data: { confirm: 'Você tem certeza?' } %></td>
       </tr>
     <% end %>
   </tbody>
@@ -34,4 +34,4 @@
 
 <br>
 
-<%= link_to 'New Ordemdeservico', new_ordemdeservico_path %>
+<%= link_to 'Cadastrar Novas Ordens de Serviços', new_ordemdeservico_path %>

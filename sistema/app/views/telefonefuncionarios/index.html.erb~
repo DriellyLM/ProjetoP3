@@ -1,4 +1,4 @@
-<h1>Listing telefonefuncionarios</h1>
+<h1>Listar Telefones dos Funcionários</h1>
 
 <table>
   <thead>
@@ -15,9 +15,9 @@
     <% @telefonefuncionarios.each do |telefonefuncionario| %>
       <tr>
         <td><%= telefonefuncionario.numerotelefone %></td>
-        <td><%= telefonefuncionario.funcionario.to_s %></td>
-        <td><%= link_to 'Show', telefonefuncionario %></td>
-        <td><%= link_to 'Edit', edit_telefonefuncionario_path(telefonefuncionario) %></td>
+        <td><%= telefonefuncionario.funcionario.nome %></td>
+        <td><%= link_to 'Ver', telefonefuncionario %></td>
+        <td><%= link_to 'Editar', edit_telefonefuncionario_path(telefonefuncionario) %></td>
         <td><%= link_to 'Excluir', telefonefuncionario, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
@@ -26,4 +26,4 @@
 
 <br>
 
-<%= link_to 'New Telefonefuncionario', new_telefonefuncionario_path %>
+<%= link_to 'Cadastrar Novo Telefone de Funcionário', new_telefonefuncionario_path %>
