@@ -1,0 +1,2 @@
+class ItensdopedidosController < InheritedResources::Base
+end

@@ -1,0 +1,33 @@
+<h1>Listing itensdopedidos</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Itempedido</th>
+      <th>Quantidade</th>
+      <th>Pedido</th>
+      <th>Produto</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @itensdopedidos.each do |itensdopedido| %>
+      <tr>
+        <td><%= itensdopedido.itempedido %></td>
+        <td><%= itensdopedido.quantidade %></td>
+        <td><%= itensdopedido.pedido %></td>
+        <td><%= itensdopedido.produto %></td>
+        <td><%= link_to 'Show', itensdopedido %></td>
+        <td><%= link_to 'Edit', edit_itensdopedido_path(itensdopedido) %></td>
+        <td><%= link_to 'Destroy', itensdopedido, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Itensdopedido', new_itensdopedido_path %>

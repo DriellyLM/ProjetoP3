@@ -1,0 +1,60 @@
+# coding: utf-8
+require 'spec_helper'
+
+feature 'gerenciar itens do pedido' do
+
+  scenario 'incluir itens do pedido' do #, :javascript => true  do
+	
+    pedido = FactoryGirl.create(:pedido, :datapedido => "2014-02-27")
+    produto = FactoryGirl.create(:produto, :numeroee => "1234567")
+
+    visit new_itensdopedido_path
+    preencher_e_verificar_itensdopedido
+   
+  end
+
+
+  scenario 'alterar itens do pedido' do #, :javascript => true  do
+
+    pedido = FactoryGirl.create(:pedido, :datapedido => "2014-02-27")
+    produto = FactoryGirl.create(:produto, :numeroee => "1234567")
+    
+    itensdopedido = FactoryGirl.create(:itensdopedido, :pedido => pedido, :produto => produto)
+
+    visit edit_itensdopedido_path(itensdopedido)
+    preencher_e_verificar_itensdopedido
+
+  end
+
+
+  scenario 'excluir itens do pedido' do #, :javascript => true  do
+
+    pedido = FactoryGirl.create(:pedido, :datapedido => "2014-02-27")
+    produto = FactoryGirl.create(:produto, :numeroee => "1234567")
+ 
+    itensdopedido = FactoryGirl.create(:itensdopedido, :pedido => pedido, :produto => produto)
+
+    visit itensdopedidos_path
+    click_link 'Excluir'  
+    
+  end
+
+
+  def preencher_e_verificar_itensdopedido
+
+    fill_in 'Item Pedido', :with => 'Item'
+    fill_in 'Quantidade', :with => '40'
+    
+    select '2014-02-27', :from => 'Pedido'
+    select '1234567', :from => 'Produto'
+    
+    
+    click_button 'Salvar'
+    
+    page.should have_content 'Itens OS: Itens'
+    page.should have_content 'Quantidade: 30'
+    page.should have_content 'Ordem de Serviço: XXXX'
+    page.should have_content 'Serviço: XY'    
+  end   
+
+end
