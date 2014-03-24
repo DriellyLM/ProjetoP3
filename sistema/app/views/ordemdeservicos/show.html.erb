@@ -1,0 +1,34 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Descrição do Serviço:</strong>
+  <%= @ordemdeservico.descricaoservico %>
+</p>
+
+<p>
+  <strong>Descrição do Produto:</strong>
+  <%= @ordemdeservico.descricaoproduto %>
+</p>
+
+<p>
+  <strong>Data Inicial da OS:</strong>
+  <%= @ordemdeservico.datainicialos %>
+</p>
+
+<p>
+  <strong>Data Final da OS:</strong>
+  <%= @ordemdeservico.datafinalos %>
+</p>
+
+<p>
+  <strong>Usuário:</strong>
+  <%= @ordemdeservico.usuario.login %>
+</p>
+
+<p>
+  <strong>Ponto Remoto:</strong>
+  <%= @ordemdeservico.pontoremoto.endereco %>
+</p>
+
+<%= link_to 'Edit', edit_ordemdeservico_path(@ordemdeservico) %> |
+<%= link_to 'Back', ordemdeservicos_path %>

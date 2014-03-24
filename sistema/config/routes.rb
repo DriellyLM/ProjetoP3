@@ -1,4 +1,6 @@
 Sistema::Application.routes.draw do
+  resources :ordemdeservicos
+
   resources :pontoremotos
 
   resources :usuarios

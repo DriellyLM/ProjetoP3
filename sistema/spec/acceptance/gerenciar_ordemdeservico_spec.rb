@@ -47,7 +47,7 @@ feature 'gerenciar ordem de serviço' do
     fill_in 'Data Inicial da OS', :with => '2014-03-24'
     fill_in 'Data Final da OS', :with => '2014-03-24'
     
-    select 'Vitor Silva', :from => 'Usuário'
+    select 'Vitor_S', :from => 'Usuário'
     select 'ABCD', :from => 'Ponto Remoto'
     
     
@@ -57,7 +57,7 @@ feature 'gerenciar ordem de serviço' do
     page.should have_content 'Descrição do Produto: YYYY'
     page.should have_content 'Data Inicial da OS: 2014-03-24'
     page.should have_content 'Data Final da OS: 2014-03-24'
-    page.should have_content 'Usuário: Vitor Silva'
+    page.should have_content 'Usuário: Vitor_S'
     page.should have_content 'Ponto Remoto: ABCD'
     
   end   

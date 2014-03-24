@@ -1,0 +1,37 @@
+<h1>Listing ordemdeservicos</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Descrição do Serviço</th>
+      <th>Descrição do Produto</th>
+      <th>Data Inicial da OS</th>
+      <th>Data Final da OS</th>
+      <th>Usuário</th>
+      <th>Ponto Remoto</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @ordemdeservicos.each do |ordemdeservico| %>
+      <tr>
+        <td><%= ordemdeservico.descricaoservico %></td>
+        <td><%= ordemdeservico.descricaoproduto %></td>
+        <td><%= ordemdeservico.datainicialos %></td>
+        <td><%= ordemdeservico.datafinalos %></td>
+        <td><%= ordemdeservico.usuario.login %></td>
+        <td><%= ordemdeservico.pontoremoto.endereco %></td>
+        <td><%= link_to 'Show', ordemdeservico %></td>
+        <td><%= link_to 'Edit', edit_ordemdeservico_path(ordemdeservico) %></td>
+        <td><%= link_to 'Destroy', ordemdeservico, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Ordemdeservico', new_ordemdeservico_path %>

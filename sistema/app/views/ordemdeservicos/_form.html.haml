@@ -1,0 +1,9 @@
+= semantic_form_for [@ordemdeservico] do |form|
+  
+  = form.input :descricaoservico, :label => 'Descrição do Serviço'
+  = form.input :descricaoproduto, :label => 'Descrição do Produto'
+  = form.input :datainicialos, :label => 'Data Inicial da OS'
+  = form.input :datafinalos, :label => 'Data Final da OS'
+  = form.input :usuario, :member_label => :login, :label => 'Usuário' 
+  = form.input :pontoremoto, :member_label => :endereco, :label => 'Ponto Remoto'
+  = form.submit 'Salvar'
