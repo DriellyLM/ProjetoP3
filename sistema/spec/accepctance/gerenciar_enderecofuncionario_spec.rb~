@@ -34,7 +34,7 @@ feature 'gerenciar endereco do funcionario' do
       fill_in 'Bairro', :with => "Parque Santo Amaro"
       fill_in 'Cidade', :with => "Campos dos Goytacazes"
       fill_in 'UF', :with => "RJ"
-      fill_in 'CEP', :with => "28000000"
+      fill_in 'CEP', :with => "28000-000"
  
       click_button 'Salvar'
 
@@ -43,7 +43,7 @@ feature 'gerenciar endereco do funcionario' do
       page.should have_content 'Bairro: Parque Santo Amaro'
       page.should have_content 'Cidade: Campos dos Goytacazes'
       page.should have_content 'UF: RJ'
-      page.should have_content 'CEP: 28000000'
+      page.should have_content 'CEP: 28000-000'
 
    end
 end

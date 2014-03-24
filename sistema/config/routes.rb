@@ -1,4 +1,6 @@
 Sistema::Application.routes.draw do
+  resources :enderecofuncionarios
+
   resources :cargofuncionarios
 
   # The priority is based upon order of creation: first created -> highest priority.

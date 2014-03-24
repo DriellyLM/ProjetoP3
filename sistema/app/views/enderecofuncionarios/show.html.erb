@@ -1,0 +1,34 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Logradouro:</strong>
+  <%= @enderecofuncionario.logradouro %>
+</p>
+
+<p>
+  <strong>Numero:</strong>
+  <%= @enderecofuncionario.numero %>
+</p>
+
+<p>
+  <strong>Bairro:</strong>
+  <%= @enderecofuncionario.bairro %>
+</p>
+
+<p>
+  <strong>Cidade:</strong>
+  <%= @enderecofuncionario.cidade %>
+</p>
+
+<p>
+  <strong>UF:</strong>
+  <%= @enderecofuncionario.uf %>
+</p>
+
+<p>
+  <strong>CEP:</strong>
+  <%= @enderecofuncionario.cep %>
+</p>
+
+<%= link_to 'Edit', edit_enderecofuncionario_path(@enderecofuncionario) %> |
+<%= link_to 'Back', enderecofuncionarios_path %>

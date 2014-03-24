@@ -1,0 +1,37 @@
+<h1>Listing enderecofuncionarios</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Logradouro</th>
+      <th>Numero</th>
+      <th>Bairro</th>
+      <th>Cidade</th>
+      <th>UF</th>
+      <th>CEP</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @enderecofuncionarios.each do |enderecofuncionario| %>
+      <tr>
+        <td><%= enderecofuncionario.logradouro %></td>
+        <td><%= enderecofuncionario.numero %></td>
+        <td><%= enderecofuncionario.bairro %></td>
+        <td><%= enderecofuncionario.cidade %></td>
+        <td><%= enderecofuncionario.uf %></td>
+        <td><%= enderecofuncionario.cep %></td>
+        <td><%= link_to 'Show', enderecofuncionario %></td>
+        <td><%= link_to 'Edit', edit_enderecofuncionario_path(enderecofuncionario) %></td>
+        <td><%= link_to 'Excluir', enderecofuncionario, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Enderecofuncionario', new_enderecofuncionario_path %>
