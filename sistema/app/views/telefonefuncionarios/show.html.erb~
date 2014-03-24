@@ -1,7 +1,7 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <strong>Número do Telefone:</strong>
+  <strong>Numero do Telefone:</strong>
   <%= @telefonefuncionario.numerotelefone %>
 </p>
 

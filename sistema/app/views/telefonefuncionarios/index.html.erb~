@@ -3,8 +3,8 @@
 <table>
   <thead>
     <tr>
-      <th>Numerotelefone</th>
-      <th>Funcionario</th>
+      <th>Numero do Telefone</th>
+      <th>Funcionário</th>
       <th></th>
       <th></th>
       <th></th>
@@ -15,10 +15,10 @@
     <% @telefonefuncionarios.each do |telefonefuncionario| %>
       <tr>
         <td><%= telefonefuncionario.numerotelefone %></td>
-        <td><%= telefonefuncionario.funcionario %></td>
+        <td><%= telefonefuncionario.funcionario.nome %></td>
         <td><%= link_to 'Show', telefonefuncionario %></td>
         <td><%= link_to 'Edit', edit_telefonefuncionario_path(telefonefuncionario) %></td>
-        <td><%= link_to 'Destroy', telefonefuncionario, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Excluir', telefonefuncionario, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>
