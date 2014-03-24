@@ -1,0 +1,2 @@
+class CargofuncionariosController < InheritedResources::Base
+end

@@ -1,0 +1,39 @@
+# coding: utf-8
+
+require 'spec_helper'
+
+feature 'gerenciar cargo funcionario' do
+
+	scenario 'incluir cargo funcionario', :javascript => true do
+		
+		visit new_cargofuncionario_path
+		preencher_e_verificar_cargofuncionario
+
+  	end
+
+	scenario 'alterar cargo funcionario' do #, :js => true do
+	
+		cargofuncionario = FactoryGirl.create(:cargofuncionario)
+    		visit edit_cargofuncionario_path(cargofuncionario)
+    		preencher_e_verificar_cargofuncionario
+
+	end
+
+	scenario 'excluir cargo funcionario' do #, :javascript => true do
+        	
+        	cargofuncionario = FactoryGirl.create(:cargofuncionario)
+        	visit cargofuncionarios_path
+        	click_link 'Excluir'
+
+	end
+
+   def preencher_e_verificar_cargofuncionario
+      
+      fill_in 'Cargo Funcionario', :with => "Auxiliar Administrativo"   
+ 
+      click_button 'Salvar'
+
+      page.should have_content 'Cargo Funcionario: Auxiliar Administrativo'
+
+   end
+end
