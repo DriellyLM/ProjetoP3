@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140324192653) do
+ActiveRecord::Schema.define(version: 20140324194130) do
 
   create_table "cargofuncionarios", force: true do |t|
     t.string   "cargofuncionario"
@@ -84,6 +84,16 @@ ActiveRecord::Schema.define(version: 20140324192653) do
 
   add_index "ordemdeservicos", ["pontoremoto_id"], name: "index_ordemdeservicos_on_pontoremoto_id"
   add_index "ordemdeservicos", ["usuario_id"], name: "index_ordemdeservicos_on_usuario_id"
+
+  create_table "pedidos", force: true do |t|
+    t.string   "datapedido"
+    t.string   "dataenvio"
+    t.integer  "ordemdeservico_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "pedidos", ["ordemdeservico_id"], name: "index_pedidos_on_ordemdeservico_id"
 
   create_table "pontoremotos", force: true do |t|
     t.string   "endereco"
