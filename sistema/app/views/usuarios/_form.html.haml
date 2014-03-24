@@ -1,0 +1,8 @@
+= semantic_form_for [@usuario] do |form|
+  
+  = form.input :login, :label => 'Login'
+  = form.input :senha, :label => 'Senha'
+  = form.input :ativo, :label => 'Ativo'
+  = form.input :funcionario, :member_label => :nome, :label => 'Funcionário' 
+  = form.input :niveldeacesso, :member_label => :descricaonivel, :label => 'Nível de Acesso'
+  = form.submit 'Salvar'
