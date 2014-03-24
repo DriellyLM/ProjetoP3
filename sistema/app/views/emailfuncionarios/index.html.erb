@@ -1,0 +1,29 @@
+<h1>Listing emailfuncionarios</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Email</th>
+      <th>Funcionário</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @emailfuncionarios.each do |emailfuncionario| %>
+      <tr>
+        <td><%= emailfuncionario.email %></td>
+        <td><%= emailfuncionario.funcionario.nome %></td>
+        <td><%= link_to 'Show', emailfuncionario %></td>
+        <td><%= link_to 'Edit', edit_emailfuncionario_path(emailfuncionario) %></td>
+        <td><%= link_to 'Excluir', emailfuncionario, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Emailfuncionario', new_emailfuncionario_path %>

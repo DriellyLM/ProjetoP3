@@ -1,0 +1,5 @@
+= semantic_form_for [@emailfuncionario] do |form|
+  
+  = form.input :email, :label => 'Email'
+  = form.input :funcionario, :member_label => :nome, :label => 'Funcionário'
+  = form.submit 'Salvar'

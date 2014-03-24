@@ -11,13 +11,22 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140324172039) do
+ActiveRecord::Schema.define(version: 20140324173026) do
 
   create_table "cargofuncionarios", force: true do |t|
     t.string   "cargofuncionario"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
+
+  create_table "emailfuncionarios", force: true do |t|
+    t.string   "email"
+    t.integer  "funcionario_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "emailfuncionarios", ["funcionario_id"], name: "index_emailfuncionarios_on_funcionario_id"
 
   create_table "enderecofuncionarios", force: true do |t|
     t.string   "logradouro"

@@ -1,0 +1,2 @@
+class EmailfuncionariosController < InheritedResources::Base
+end

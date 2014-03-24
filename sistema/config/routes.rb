@@ -1,4 +1,6 @@
 Sistema::Application.routes.draw do
+  resources :emailfuncionarios
+
   resources :telefonefuncionarios
 
   resources :funcionarios
