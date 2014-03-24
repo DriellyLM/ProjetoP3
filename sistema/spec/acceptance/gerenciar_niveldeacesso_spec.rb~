@@ -1,0 +1,47 @@
+# coding: utf-8
+require 'spec_helper'
+
+feature 'gerenciar nivel de acesso' do
+
+  scenario 'incluir nivel de acesso', :javascript => true do
+
+    visit new_niveldeacesso_path
+    preencher_e_verificar_niveldeacesso
+   
+  end
+
+
+  scenario 'alterar nivel de acesso' do #, :javascript => true  do
+    
+    niveldeacesso = FactoryGirl.create(:niveldeacesso)
+
+    visit edit_niveldeacesso_path(niveldeacesso)
+    preencher_e_verificar_niveldeacesso
+
+  end
+
+
+  scenario 'excluir nivel de acesso' do #, :javascript => true  do
+ 
+    niveldeacesso = FactoryGirl.create(:niveldeacesso)
+
+    visit niveldeacessos_path
+    click_link 'Excluir'  
+    
+  end
+
+
+  def preencher_e_verificar_niveldeacesso
+
+    fill_in 'Descrição do Nível', :with => 'XXX'
+    
+    
+    click_button 'Salvar'
+    
+    page.should have_content 'Descrição do Nível: XXX'
+
+    
+    
+  end   
+
+end

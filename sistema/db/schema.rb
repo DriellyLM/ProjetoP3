@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140324173026) do
+ActiveRecord::Schema.define(version: 20140324174248) do
 
   create_table "cargofuncionarios", force: true do |t|
     t.string   "cargofuncionario"
@@ -52,6 +52,12 @@ ActiveRecord::Schema.define(version: 20140324173026) do
 
   add_index "funcionarios", ["cargofuncionario_id"], name: "index_funcionarios_on_cargofuncionario_id"
   add_index "funcionarios", ["enderecofuncionario_id"], name: "index_funcionarios_on_enderecofuncionario_id"
+
+  create_table "niveldeacessos", force: true do |t|
+    t.string   "descricaonivel"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "telefonefuncionarios", force: true do |t|
     t.string   "numerotelefone"

@@ -1,0 +1,27 @@
+<h1>Listing niveldeacessos</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Descricaonivel</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @niveldeacessos.each do |niveldeacesso| %>
+      <tr>
+        <td><%= niveldeacesso.descricaonivel %></td>
+        <td><%= link_to 'Show', niveldeacesso %></td>
+        <td><%= link_to 'Edit', edit_niveldeacesso_path(niveldeacesso) %></td>
+        <td><%= link_to 'Destroy', niveldeacesso, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Niveldeacesso', new_niveldeacesso_path %>

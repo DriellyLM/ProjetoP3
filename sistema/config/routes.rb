@@ -1,4 +1,6 @@
 Sistema::Application.routes.draw do
+  resources :niveldeacessos
+
   resources :emailfuncionarios
 
   resources :telefonefuncionarios
