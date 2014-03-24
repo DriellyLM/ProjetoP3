@@ -3,8 +3,6 @@
 <table>
   <thead>
     <tr>
-      <th>Email</th>
-      <th>Telefone</th>
       <th>Nome</th>
       <th>CPF</th>
       <th>Sexo</th>
@@ -20,8 +18,6 @@
   <tbody>
     <% @funcionarios.each do |funcionario| %>
       <tr>
-        <td><%= funcionario.email %></td>
-        <td><%= funcionario.telefone %></td>
         <td><%= funcionario.nome %></td>
         <td><%= funcionario.cpf %></td>
         <td><%= funcionario.sexo %></td>

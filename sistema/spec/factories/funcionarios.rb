@@ -2,8 +2,6 @@
 
 FactoryGirl.define do
   factory :funcionario do
-    email "MyString"
-    telefone "MyString"
     nome "MyString"
     cpf "MyString"
     sexo "MyString"

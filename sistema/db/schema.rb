@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140324162950) do
+ActiveRecord::Schema.define(version: 20140324172039) do
 
   create_table "cargofuncionarios", force: true do |t|
     t.string   "cargofuncionario"
@@ -31,8 +31,6 @@ ActiveRecord::Schema.define(version: 20140324162950) do
   end
 
   create_table "funcionarios", force: true do |t|
-    t.string   "email"
-    t.string   "telefone"
     t.string   "nome"
     t.string   "cpf"
     t.string   "sexo"
@@ -45,5 +43,14 @@ ActiveRecord::Schema.define(version: 20140324162950) do
 
   add_index "funcionarios", ["cargofuncionario_id"], name: "index_funcionarios_on_cargofuncionario_id"
   add_index "funcionarios", ["enderecofuncionario_id"], name: "index_funcionarios_on_enderecofuncionario_id"
+
+  create_table "telefonefuncionarios", force: true do |t|
+    t.string   "numerotelefone"
+    t.integer  "funcionario_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "telefonefuncionarios", ["funcionario_id"], name: "index_telefonefuncionarios_on_funcionario_id"
 
 end

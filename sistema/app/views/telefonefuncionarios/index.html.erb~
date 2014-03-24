@@ -1,0 +1,29 @@
+<h1>Listing telefonefuncionarios</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Numerotelefone</th>
+      <th>Funcionario</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @telefonefuncionarios.each do |telefonefuncionario| %>
+      <tr>
+        <td><%= telefonefuncionario.numerotelefone %></td>
+        <td><%= telefonefuncionario.funcionario %></td>
+        <td><%= link_to 'Show', telefonefuncionario %></td>
+        <td><%= link_to 'Edit', edit_telefonefuncionario_path(telefonefuncionario) %></td>
+        <td><%= link_to 'Destroy', telefonefuncionario, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Telefonefuncionario', new_telefonefuncionario_path %>

@@ -23,7 +23,7 @@ describe FuncionariosController do
   # This should return the minimal set of attributes required to create a valid
   # Funcionario. As you add validations to Funcionario, be sure to
   # adjust the attributes here as well.
-  let(:valid_attributes) { { "email" => "MyString" } }
+  let(:valid_attributes) { { "nome" => "MyString" } }
 
   # This should return the minimal set of values that should be in the session
   # in order to pass any filters (e.g. authentication) defined in
@@ -85,14 +85,14 @@ describe FuncionariosController do
       it "assigns a newly created but unsaved funcionario as @funcionario" do
         # Trigger the behavior that occurs when invalid params are submitted
         Funcionario.any_instance.stub(:save).and_return(false)
-        post :create, {:funcionario => { "email" => "invalid value" }}, valid_session
+        post :create, {:funcionario => { "nome" => "invalid value" }}, valid_session
         assigns(:funcionario).should be_a_new(Funcionario)
       end
 
       it "re-renders the 'new' template" do
         # Trigger the behavior that occurs when invalid params are submitted
         Funcionario.any_instance.stub(:save).and_return(false)
-        post :create, {:funcionario => { "email" => "invalid value" }}, valid_session
+        post :create, {:funcionario => { "nome" => "invalid value" }}, valid_session
         response.should render_template("new")
       end
     end
@@ -106,8 +106,8 @@ describe FuncionariosController do
         # specifies that the Funcionario created on the previous line
         # receives the :update_attributes message with whatever params are
         # submitted in the request.
-        Funcionario.any_instance.should_receive(:update).with({ "email" => "MyString" })
-        put :update, {:id => funcionario.to_param, :funcionario => { "email" => "MyString" }}, valid_session
+        Funcionario.any_instance.should_receive(:update).with({ "nome" => "MyString" })
+        put :update, {:id => funcionario.to_param, :funcionario => { "nome" => "MyString" }}, valid_session
       end
 
       it "assigns the requested funcionario as @funcionario" do
@@ -128,7 +128,7 @@ describe FuncionariosController do
         funcionario = Funcionario.create! valid_attributes
         # Trigger the behavior that occurs when invalid params are submitted
         Funcionario.any_instance.stub(:save).and_return(false)
-        put :update, {:id => funcionario.to_param, :funcionario => { "email" => "invalid value" }}, valid_session
+        put :update, {:id => funcionario.to_param, :funcionario => { "nome" => "invalid value" }}, valid_session
         assigns(:funcionario).should eq(funcionario)
       end
 
@@ -136,7 +136,7 @@ describe FuncionariosController do
         funcionario = Funcionario.create! valid_attributes
         # Trigger the behavior that occurs when invalid params are submitted
         Funcionario.any_instance.stub(:save).and_return(false)
-        put :update, {:id => funcionario.to_param, :funcionario => { "email" => "invalid value" }}, valid_session
+        put :update, {:id => funcionario.to_param, :funcionario => { "nome" => "invalid value" }}, valid_session
         response.should render_template("edit")
       end
     end

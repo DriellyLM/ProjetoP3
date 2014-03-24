@@ -1,16 +1,6 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <strong>Email:</strong>
-  <%= @funcionario.email %>
-</p>
-
-<p>
-  <strong>Telefone:</strong>
-  <%= @funcionario.telefone %>
-</p>
-
-<p>
   <strong>Nome:</strong>
   <%= @funcionario.nome %>
 </p>
@@ -36,8 +26,8 @@
 </p>
 
 <p>
-  <strong>Endereço Funcionário:</strong>
-  <%= @funcionario.enderecofuncionario %>
+  <strong>Endereço do Funcionário:</strong>
+  <%= @funcionario.enderecofuncionario.logradouro %>
 </p>
 
 <%= link_to 'Edit', edit_funcionario_path(@funcionario) %> |

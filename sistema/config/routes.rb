@@ -1,4 +1,6 @@
 Sistema::Application.routes.draw do
+  resources :telefonefuncionarios
+
   resources :funcionarios
 
   resources :enderecofuncionarios

@@ -3,14 +3,12 @@
 <table>
   <thead>
     <tr>
-      <th>Email</th>
-      <th>Telefone</th>
       <th>Nome</th>
       <th>CPF</th>
       <th>Sexo</th>
       <th>Data de Nascimento</th>
       <th>Cargo Funcionário</th>
-      <th>Endereço Funcionário</th>
+      <th>Endereço do Funcionário</th>
       <th></th>
       <th></th>
       <th></th>
@@ -20,14 +18,12 @@
   <tbody>
     <% @funcionarios.each do |funcionario| %>
       <tr>
-        <td><%= funcionario.email %></td>
-        <td><%= funcionario.telefone %></td>
         <td><%= funcionario.nome %></td>
         <td><%= funcionario.cpf %></td>
         <td><%= funcionario.sexo %></td>
         <td><%= funcionario.datanascimento %></td>
         <td><%= funcionario.cargofuncionario.cargofuncionario %></td>
-        <td><%= funcionario.enderecofuncionario %></td>
+        <td><%= funcionario.enderecofuncionario.logradouro %></td>
         <td><%= link_to 'Show', funcionario %></td>
         <td><%= link_to 'Edit', edit_funcionario_path(funcionario) %></td>
         <td><%= link_to 'Excluir', funcionario, method: :delete, data: { confirm: 'Are you sure?' } %></td>
