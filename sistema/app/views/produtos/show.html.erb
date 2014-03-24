@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Quantidade:</strong>
+  <%= @produto.quantidade %>
+</p>
+
+<p>
+  <strong>Número da Etiqueta Eletrônica:</strong>
+  <%= @produto.numeroee %>
+</p>
+
+<p>
+  <strong>Data de Entrada no Estoque:</strong>
+  <%= @produto.dataentradaestoque %>
+</p>
+
+<p>
+  <strong>Data de Saída do Estoque:</strong>
+  <%= @produto.datasaidaestoque %>
+</p>
+
+<%= link_to 'Edit', edit_produto_path(@produto) %> |
+<%= link_to 'Back', produtos_path %>

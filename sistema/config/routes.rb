@@ -1,4 +1,6 @@
 Sistema::Application.routes.draw do
+  resources :produtos
+
   resources :pedidos
 
   resources :itensdaordemdeservicos
