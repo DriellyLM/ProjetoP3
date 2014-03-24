@@ -1,0 +1,44 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Email:</strong>
+  <%= @funcionario.email %>
+</p>
+
+<p>
+  <strong>Telefone:</strong>
+  <%= @funcionario.telefone %>
+</p>
+
+<p>
+  <strong>Nome:</strong>
+  <%= @funcionario.nome %>
+</p>
+
+<p>
+  <strong>CPF:</strong>
+  <%= @funcionario.cpf %>
+</p>
+
+<p>
+  <strong>Sexo:</strong>
+  <%= @funcionario.sexo %>
+</p>
+
+<p>
+  <strong>Data de Nascimento:</strong>
+  <%= @funcionario.datanascimento %>
+</p>
+
+<p>
+  <strong>Cargo Funcionário:</strong>
+  <%= @funcionario.cargofuncionario.cargofuncionario %>
+</p>
+
+<p>
+  <strong>Endereço Funcionário:</strong>
+  <%= @funcionario.enderecofuncionario.logradouro %>
+</p>
+
+<%= link_to 'Edit', edit_funcionario_path(@funcionario) %> |
+<%= link_to 'Back', funcionarios_path %>

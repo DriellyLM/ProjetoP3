@@ -1,0 +1,10 @@
+= semantic_form_for [@funcionario] do |form|
+  = form.input :email, :label => 'Email'
+  = form.input :telefone, :label => 'Telefone'
+  = form.input :nome, :label => 'Nome'
+  = form.input :cpf, :label => 'CPF'
+  = form.input :sexo, :label => 'Sexo'
+  = form.input :datanascimento, :label => 'Data de Nascimento' 
+  = form.input :cargofuncionario, :member_label => :cargofuncionario, :label => 'Auxiliar Administrativo' 
+  = form.input :enderecofuncionario, :member_label => :logradouro, :label => 'Rua Antônio Silva' 
+  = form.submit 'Salvar'

@@ -1,4 +1,6 @@
 Sistema::Application.routes.draw do
+  resources :funcionarios
+
   resources :enderecofuncionarios
 
   resources :cargofuncionarios
