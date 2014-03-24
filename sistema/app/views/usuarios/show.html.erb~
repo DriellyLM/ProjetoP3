@@ -16,13 +16,13 @@
 </p>
 
 <p>
-  <strong>Funcionario:</strong>
-  <%= @usuario.funcionario %>
+  <strong>Funcionário:</strong>
+  <%= @usuario.funcionario.to_s %>
 </p>
 
 <p>
-  <strong>Niveldeacesso:</strong>
-  <%= @usuario.niveldeacesso %>
+  <strong>Nível de Acesso:</strong>
+  <%= @usuario.niveldeacesso.to_s %>
 </p>
 
 <%= link_to 'Edit', edit_usuario_path(@usuario) %> |

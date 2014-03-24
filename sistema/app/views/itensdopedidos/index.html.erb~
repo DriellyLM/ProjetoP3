@@ -3,7 +3,7 @@
 <table>
   <thead>
     <tr>
-      <th>Itempedido</th>
+      <th>Item Pedido</th>
       <th>Quantidade</th>
       <th>Pedido</th>
       <th>Produto</th>
@@ -18,11 +18,11 @@
       <tr>
         <td><%= itensdopedido.itempedido %></td>
         <td><%= itensdopedido.quantidade %></td>
-        <td><%= itensdopedido.pedido %></td>
-        <td><%= itensdopedido.produto %></td>
+        <td><%= itensdopedido.pedido.to_s %></td>
+        <td><%= itensdopedido.produto.to_s %></td>
         <td><%= link_to 'Show', itensdopedido %></td>
         <td><%= link_to 'Edit', edit_itensdopedido_path(itensdopedido) %></td>
-        <td><%= link_to 'Destroy', itensdopedido, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Excluir', itensdopedido, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>

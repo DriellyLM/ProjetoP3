@@ -1,7 +1,7 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <strong>Itempedido:</strong>
+  <strong>Item Pedido:</strong>
   <%= @itensdopedido.itempedido %>
 </p>
 
@@ -12,12 +12,12 @@
 
 <p>
   <strong>Pedido:</strong>
-  <%= @itensdopedido.pedido %>
+  <%= @itensdopedido.pedido.to_s %>
 </p>
 
 <p>
   <strong>Produto:</strong>
-  <%= @itensdopedido.produto %>
+  <%= @itensdopedido.produto.to_s %>
 </p>
 
 <%= link_to 'Edit', edit_itensdopedido_path(@itensdopedido) %> |

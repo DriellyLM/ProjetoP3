@@ -1,4 +1,4 @@
-<h1>Listing cargofuncionarios</h1>
+<h1>Listar Cargos dos Funcionários</h1>
 
 <table>
   <thead>
@@ -14,8 +14,8 @@
     <% @cargofuncionarios.each do |cargofuncionario| %>
       <tr>
         <td><%= cargofuncionario.cargofuncionario %></td>
-        <td><%= link_to 'Show', cargofuncionario %></td>
-        <td><%= link_to 'Edit', edit_cargofuncionario_path(cargofuncionario) %></td>
+        <td><%= link_to 'Ver', cargofuncionario %></td>
+        <td><%= link_to 'Editar', edit_cargofuncionario_path(cargofuncionario) %></td>
         <td><%= link_to 'Excluir', cargofuncionario, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
@@ -24,4 +24,4 @@
 
 <br>
 
-<%= link_to 'New Cargofuncionario', new_cargofuncionario_path %>
+<%= link_to 'Criar Novo Cargo de Funcionário', new_cargofuncionario_path %>

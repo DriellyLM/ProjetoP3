@@ -6,8 +6,8 @@
 </p>
 
 <p>
-  <strong>Funcionario:</strong>
-  <%= @emailfuncionario.funcionario %>
+  <strong>Funcionário:</strong>
+  <%= @emailfuncionario.funcionario.nome %>
 </p>
 
 <%= link_to 'Edit', edit_emailfuncionario_path(@emailfuncionario) %> |

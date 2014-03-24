@@ -18,7 +18,7 @@
         <td><%= emailfuncionario.funcionario.nome %></td>
         <td><%= link_to 'Show', emailfuncionario %></td>
         <td><%= link_to 'Edit', edit_emailfuncionario_path(emailfuncionario) %></td>
-        <td><%= link_to 'Destroy', emailfuncionario, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Excluir', emailfuncionario, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>

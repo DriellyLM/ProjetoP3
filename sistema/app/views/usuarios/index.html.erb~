@@ -7,7 +7,7 @@
       <th>Senha</th>
       <th>Ativo</th>
       <th>Funcionário</th>
-      <th>Nivel de Acesso</th>
+      <th>Nível de Acesso</th>
       <th></th>
       <th></th>
       <th></th>
@@ -21,7 +21,7 @@
         <td><%= usuario.senha %></td>
         <td><%= usuario.ativo %></td>
         <td><%= usuario.funcionario.nome %></td>
-        <td><%= usuario.niveldeacesso.descricaonivel %></td>
+        <td><%= usuario.niveldeacesso.to_s %></td>
         <td><%= link_to 'Show', usuario %></td>
         <td><%= link_to 'Edit', edit_usuario_path(usuario) %></td>
         <td><%= link_to 'Excluir', usuario, method: :delete, data: { confirm: 'Are you sure?' } %></td>

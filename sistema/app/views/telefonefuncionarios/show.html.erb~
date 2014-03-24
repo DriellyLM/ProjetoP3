@@ -1,13 +1,13 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <strong>Numero do Telefone:</strong>
+  <strong>Número do Telefone:</strong>
   <%= @telefonefuncionario.numerotelefone %>
 </p>
 
 <p>
   <strong>Funcionário:</strong>
-  <%= @telefonefuncionario.funcionario.nome %>
+  <%= @telefonefuncionario.funcionario.to_s %>
 </p>
 
 <%= link_to 'Edit', edit_telefonefuncionario_path(@telefonefuncionario) %> |
